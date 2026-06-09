@@ -1,60 +1,124 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Douglas Wallquist – E-Portfolio</title>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Douglas Wallquist – Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  body { max-width: 680px; margin: 60px auto; padding: 0 1.5rem; font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; color: #1a1a1a; background: #fff; }
+  h1 { font-size: 1.6rem; font-weight: 500; margin-bottom: 0.25rem; }
+  p.sub { color: #666; margin-bottom: 1.25rem; }
+  nav a { font-size: 0.85rem; color: #555; text-decoration: none; margin-right: 1rem; }
+  nav a:hover { color: #2563eb; }
+  hr { border: none; border-top: 1px solid #e5e5e5; margin: 2.5rem 0; }
+  h2 { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin-bottom: 1.25rem; }
+  p { color: #333; margin-bottom: 0.75rem; }
+  .skills { color: #555; font-size: 0.88rem; }
+  .project { margin-bottom: 2.25rem; }
+  .project-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem; }
+  .project-title { font-weight: 500; font-size: 1rem; }
+  .project-link { font-size: 0.82rem; color: #2563eb; text-decoration: none; }
+  .project-link:hover { text-decoration: underline; }
+  .project-meta { font-size: 0.82rem; color: #888; margin-bottom: 0.5rem; }
+  ul { padding-left: 1.2rem; color: #444; font-size: 0.9rem; }
+  ul li { margin-bottom: 0.2rem; }
+  pre { background: #f6f6f6; border-radius: 6px; padding: 0.85rem 1rem; font-size: 0.75rem; overflow-x: auto; line-height: 1.65; color: #333; margin-top: 0.75rem; }
+  .contact a { color: #333; text-decoration: none; }
+  .contact a:hover { color: #2563eb; }
+  footer { font-size: 0.78rem; color: #bbb; margin-top: 3rem; padding-bottom: 2rem; }
+</style>
 </head>
 <body>
-    <h1>Douglas Wallquist</h1>
-    <p>Engineering student at KTH with focus on information and nanotechnology.</p>
-    
-    <h2>About Me</h2>
-    <p>
-    I work with data analysis, visualization and structured problem solving. 
-    My interest lies in transforming raw data into actionable insights.
-    </p>
+ 
+<h1>Douglas Wallquist</h1>
+<p class="sub">Engineering student at KTH · Information & Nanotechnology</p>
+<nav>
+  <a href="https://github.com/walleballsson" target="_blank">GitHub</a>
+  <a href="https://www.linkedin.com/in/douglas-wallquist-5200b73b2/" target="_blank">LinkedIn</a>
+  <a href="mailto:douglas.wallquist@gmail.com">Email</a>
+</nav>
+ 
+<hr>
+ 
+<h2>About</h2>
+<p>
+I'm an engineering student at KTH focused on systems programming, backend development, and databases.
+I enjoy building software from scratch and understanding how systems work under the hood.
+</p>
 
-    <h2>Projects</h2>
-   <section>
-  <h3>TCP Client Server Application</h3>
-
-  <p>Developed a client server application using TCP sockets in Java.</p>
-
-  <p><strong>Key Components:</strong></p>
+<p>
+My projects include a terminal-based Tetris engine in pure C and relational database systems with transaction-safe Java backends.
+</p>
+<p class="skills">C · Java · SQL · MySQL · JDBC · Python · Git · Linux</p>
+ 
+<hr>
+ 
+<h2>Projects</h2>
+ 
+<div class="project">
+  <div class="project-header">
+    <span class="project-title">Tetris</span>
+    <a class="project-link" href="https://github.com/walleballsson/tetris" target="_blank">github.com/walleballsson/tetris →</a>
+  </div>
+  <div class="project-meta">C11 · terminal · no external libraries</div>
+  <p>A fully playable Tetris clone in pure C, running in the terminal. No game engine — rendering, physics, and input all built from scratch.</p>
   <ul>
-    <li>Structured communication protocol</li>
-    <li>Message handling</li>
-    <li>Error handling and connection management</li>
+    <li>Time-based gravity that speeds up each level</li>
+    <li>Lock delay — piece locks 500 ms after landing</li>
+    <li>Piece rotation using the transpose algorithm on a 4×4 matrix</li>
+    <li>Line clearing with score multipliers</li>
+    <li>Raw keyboard input via <code>termios</code> — no Enter key needed</li>
+    <li>Main menu, options screen, and seeded RNG</li>
+      <p><strong>Architecture:</strong></p>
+<ul>
+  <li>Game loop and timing system</li>
+  <li>Terminal rendering engine</li>
+  <li>Collision detection system</li>
+  <li>Piece state management</li>
+  <li>Keyboard input handling using termios</li>
+</ul>
   </ul>
-</section>
-    
-    <h3>Sales Data Analysis</h3>
-
-<p><strong>Problem:</strong> Analyze sales data to identify trends and performance patterns.</p>
-
-<p><strong>Method:</strong></p>
-<ul>
-  <li>Cleaned datasets using Python (Pandas)</li>
-  <li>Performed exploratory data analysis</li>
-  <li>Created visualizations</li>
-</ul>
-
-<p><strong>Results:</strong></p>
-<ul>
-  <li>Identified seasonal trends</li>
-  <li>Highlighted high-performance product categories</li>
-</ul>
-    </p>
-
-    <h3>Power BI Dashboard</h3>
-    <p>
-    Built an interactive dashboard to visualize KPIs and business metrics.
-    </p>
-
-    <h2>Contact</h2>
-    <p>Email: douglas.wallquist@gmail.com</p>
-    <p>LinkedIn: https://www.linkedin.com/in/douglas-wallquist-5200b73b2/</p>
-    <p>GitHub: https://github.com/walleballsson</p>
-
+<pre>gcc -O2 -std=c11 tetristest.c -o tetris -lm
+./tetris</pre>
+</div>
+ 
+<div class="project">
+  <div class="project-header">
+    <span class="project-title">University Staff Database</span>
+    <a class="project-link" href="https://github.com/walleballsson/datalagring" target="_blank">github.com/walleballsson/datalagring →</a>
+  </div>
+  <div class="project-meta">MySQL · Java · KTH course IV1351 Applied Database Technology</div>
+  <p>A three-lab project modelling teaching staff, course instances, workload, and salary at a university. Schema design, analytical SQL queries, and a Java CLI app with transaction control.</p>
+  <ul>
+    <li>12-table normalized schema (3NF) — employee, department, course, workload, salary history</li>
+    <li>OLAP queries pivoting worked hours by activity type per teacher per course</li>
+    <li>Business rule: max 4 course instances per teacher per study period</li>
+    <li>Enforced both as a SQL trigger and in Java using <code>SELECT FOR UPDATE</code></li>
+    <li>Java CLI with manual commit/rollback and PreparedStatement throughout</li>
+  </ul>
+<pre>-- Hours per teacher per course instance
+SELECT CONCAT(p.first_name, ' ', p.last_name) AS teacher,
+       SUM(wl.work_hours * ta.factor)          AS total_hours
+FROM workload wl
+JOIN planned_activity pa ON wl.planned_activity_id = pa.planned_activity_id
+JOIN teaching_activity ta ON pa.activity_id = ta.activity_id
+JOIN employee e ON wl.employee_id = e.employee_id
+JOIN person p   ON e.person_id = p.person_id
+GROUP BY p.person_id;</pre>
+</div>
+ 
+<hr>
+ 
+<h2>Contact</h2>
+<div class="contact">
+  <p>Email: <a href="mailto:douglas.wallquist@gmail.com">douglas.wallquist@gmail.com</a></p>
+  <p>LinkedIn: <a href="https://www.linkedin.com/in/douglas-wallquist-5200b73b2/" target="_blank">linkedin.com/in/douglas-wallquist-5200b73b2</a></p>
+  <p>GitHub: <a href="https://github.com/walleballsson" target="_blank">github.com/walleballsson</a></p>
+</div>
+ 
+<footer>Douglas Wallquist · KTH · <span id="yr"></span></footer>
+<script>document.getElementById('yr').textContent = new Date().getFullYear();</script>
 </body>
 </html>
