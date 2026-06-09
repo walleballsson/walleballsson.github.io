@@ -64,14 +64,17 @@ My projects include a terminal-based Tetris engine in pure C and relational data
   </div>
   <div class="project-meta">C11 · terminal · no external libraries</div>
   <p>A fully playable Tetris clone in pure C, running in the terminal. No game engine — rendering, physics, and input all built from scratch.</p>
-  <ul>
-    <li>Time-based gravity that speeds up each level</li>
-    <li>Lock delay — piece locks 500 ms after landing</li>
-    <li>Piece rotation using the transpose algorithm on a 4×4 matrix</li>
-    <li>Line clearing with score multipliers</li>
-    <li>Raw keyboard input via <code>termios</code> — no Enter key needed</li>
-    <li>Main menu, options screen, and seeded RNG</li>
-      <p><strong>Architecture:</strong></p>
+ <ul>
+  <li>Time-based gravity that speeds up each level</li>
+  <li>Lock delay — piece locks 500 ms after landing</li>
+  <li>Piece rotation using the transpose algorithm on a 4×4 matrix</li>
+  <li>Line clearing with score multipliers</li>
+  <li>Raw keyboard input via <code>termios</code> — no Enter key needed</li>
+  <li>Main menu, options screen, and seeded RNG</li>
+</ul>
+
+<p><strong>Architecture:</strong></p>
+
 <ul>
   <li>Game loop and timing system</li>
   <li>Terminal rendering engine</li>
@@ -79,7 +82,6 @@ My projects include a terminal-based Tetris engine in pure C and relational data
   <li>Piece state management</li>
   <li>Keyboard input handling using termios</li>
 </ul>
-  </ul>
 <pre>gcc -O2 -std=c11 tetristest.c -o tetris -lm
 ./tetris</pre>
 </div>
