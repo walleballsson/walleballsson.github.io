@@ -7,7 +7,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  body { max-width: 680px; margin: 60px auto; padding: 0 1.5rem; font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; color: #1a1a1a; background: #fff; }
+  body { max-width: 760px; margin: 60px auto; padding: 0 1.5rem; font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.7; color: #1a1a1a; background: #fff; }
   h1 { font-size: 1.6rem; font-weight: 500; margin-bottom: 0.25rem; }
   p.sub { color: #666; margin-bottom: 1.25rem; }
   nav a { font-size: 0.85rem; color: #555; text-decoration: none; margin-right: 1rem; }
@@ -16,7 +16,7 @@
   h2 { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: #999; margin-bottom: 1.25rem; }
   p { color: #333; margin-bottom: 0.75rem; }
   .skills { color: #555; font-size: 0.88rem; }
-  .project { margin-bottom: 2.25rem; }
+  .project { margin-bottom: 3.5rem; }
   .project-header { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.4rem; }
   .project-title { font-weight: 500; font-size: 1rem; }
   .project-link { font-size: 0.82rem; color: #2563eb; text-decoration: none; }
@@ -63,7 +63,7 @@ My projects include a terminal-based Tetris engine in pure C and relational data
     <a class="project-link" href="https://github.com/walleballsson/tetris" target="_blank">github.com/walleballsson/tetris →</a>
   </div>
   <div class="project-meta">C11 · terminal · no external libraries</div>
-  <p>A fully playable Tetris clone in pure C, running in the terminal. No game engine — rendering, physics, and input all built from scratch.</p>
+  <p>A fully playable Tetris clone in pure C, running in the terminal. No external engine — rendering, timing, collision handling, and input implemented from scratch.</p>
  <ul>
   <li>Time-based gravity that speeds up each level</li>
   <li>Lock delay — piece locks 500 ms after landing</li>
@@ -97,7 +97,7 @@ My projects include a terminal-based Tetris engine in pure C and relational data
     <li>12-table normalized schema (3NF) — employee, department, course, workload, salary history</li>
     <li>OLAP queries pivoting worked hours by activity type per teacher per course</li>
     <li>Business rule: max 4 course instances per teacher per study period</li>
-    <li>Enforced both as a SQL trigger and in Java using <code>SELECT FOR UPDATE</code></li>
+    <li>Enforced business constraints both with SQL triggers and transaction-safe locking using <code>SELECT FOR UPDATE</code></li>
     <li>Java CLI with manual commit/rollback and PreparedStatement throughout</li>
   </ul>
 <pre>-- Hours per teacher per course instance
