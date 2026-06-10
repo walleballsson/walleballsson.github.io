@@ -1,4 +1,4 @@
-# E-Portfolio – Douglas Wallquist
+# E-Portfolio - Douglas Wallquist
 
 Personal portfolio site hosted on GitHub Pages.
 
