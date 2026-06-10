@@ -9,4 +9,4 @@ Personal portfolio site hosted on GitHub Pages.
 HTML · CSS · JavaScript
 
 ## Structure
-index.html — single-page portfolio
+index.html - single-page portfolio
